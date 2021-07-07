@@ -5,7 +5,9 @@
 FileProcessor will process files (probably mostly mails and get data from them.
 Later pushing it maybe to whisper or another database
 
-## Build status and Test status badge
+## Build status
+
+![Current Workflow (Test)](https://github.com/MartinsCode/FileProcessor/actions/workflows/ruby.yml/badge.svg)
 
 ## Introduction
 
@@ -41,6 +43,3 @@ For more information see [Contributing.md](Contributing.md).
 ## Getting in touch
 
 You can contact me by mail.
-
-## Library version badge
-
