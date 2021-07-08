@@ -24,7 +24,6 @@ class Carbon
   ##
   # handle sending on tcp layer
   def send_socket(message)
-    puts "Opening #{@host}, port #{@port}"
     @socket.open(@host, @port)
     @socket.print message
     @socket.close
