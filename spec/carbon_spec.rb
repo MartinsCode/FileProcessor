@@ -5,7 +5,7 @@ require 'carbon'
 RSpec.describe Carbon do
   context 'in general' do
     it 'format_message should return a message in carbon format' do
-      expect(Carbon.format_message('/cpu/load', '0.08', '2021-07-07 15:31')).to eq '/cpu/load 0.08 1625664660'
+      expect(Carbon.format_message('/cpu/load', '0.08', '2021-07-07T15:31Z')).to eq '/cpu/load 0.08 1625671860'
       expect(Carbon.format_time('2021-07-07T15:31Z')).to eq '1625671860'
       expect(Carbon.format_time('1625664660')).to eq '1625664660'
       expect(Carbon.format_time('2021-07-07T13:31:00Z')).to eq '1625664660'
