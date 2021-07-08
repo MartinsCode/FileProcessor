@@ -84,6 +84,8 @@ GEM
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.7.0)
       parser (>= 3.0.1.1)
+    rubocop-rake (0.5.1)
+      rubocop
     rubocop-rspec (2.4.0)
       rubocop (~> 1.0)
       rubocop-ast (>= 1.1.0)
@@ -123,6 +125,7 @@ DEPENDENCIES
   reek
   rspec
   rubocop
+  rubocop-rake
   rubocop-rspec
   simplecov
 
