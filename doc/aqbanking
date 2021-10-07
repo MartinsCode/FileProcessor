@@ -23,11 +23,11 @@ from: https://www.linuxwiki.de/AqBanking?action=AttachFile&do=view&target=aqbank
 # repeat for all accounts:
 # request transactions to a ctx-file
 
-aqbanking-cli request --transactions --bank=PAYPAL --account=XXXX --fromdate=20210101 --todate=20211005 -c 2021-Paypal.ctx
+aqbanking-cli request --transactions --bank=PAYPAL --account=XXXX --fromdate=20210101 --todate=20211005 -c Paypal.ctx
 
 # then process context-file
 
-aqbanking-cli listtrans -c 2020-Paypal.ctx
+aqbanking-cli listtrans -c Paypal.ctx
 
 # Depending on type of account (bank/paypal) informations may vary
 # according to aqbanking listtrans --help  one may change output format. I wasn't successful.
