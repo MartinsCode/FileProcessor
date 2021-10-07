@@ -1,0 +1,33 @@
+
+# Use of aqbanking
+
+aqbanking-cli listaccs          # List accounts
+
+# enqueue requests
+
+aqbanking-cli request --bank=x --account=y --transactions --fromdate= [--todate=]    # Get transactions from fromdate for bank
+aqbanking-cli request --bank=x --account=y --balance                                 # get balance
+
+# execute requests
+
+aqbanking-cli exec --ctxfile=foobar.ctx       # execute requests and save things in contextfile
+
+# process results
+
+aqbanking-cli listtrans --bank= --account= --ctxfile= --outfile= --exporter= --profile=forexporter
+aqbanking-cli listbal --bank= --account= --ctxfile= --outfile=
+
+from: https://www.linuxwiki.de/AqBanking?action=AttachFile&do=view&target=aqbanking-tool-README.txt
+
+
+# repeat for all accounts:
+# request transactions to a ctx-file
+
+aqbanking-cli request --transactions --bank=PAYPAL --account=XXXX --fromdate=20210101 --todate=20211005 -c 2021-Paypal.ctx
+
+# then process context-file
+
+aqbanking-cli listtrans -c 2020-Paypal.ctx
+
+# Depending on type of account (bank/paypal) informations may vary
+# according to aqbanking listtrans --help  one may change output format. I wasn't successful.
